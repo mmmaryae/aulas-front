@@ -1,0 +1,209 @@
+/* REGRAS
+(Síntese  de regra:)
+Seletor {propriedade: valor; } */
+
+
+/*A regra abaixo para o seletor UNIVERSAL
+aplica ma mudança ao comportamento padrão do Box Model.
+Isso evitaráproblemas relacionados a width< padding,
+hight e border dos elementos. SEMPRE USE em seus projetos */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../imagens/oriental-tiles.png);
+
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.849);
+    width: 80%;
+    margin: auto;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: gray 20px 20px 50px 40px;
+
+}
+
+h1 {
+
+    font-family: impact;
+    text-align: center;
+    font-weight: normal;
+    background-color: rgba(0, 0, 0, 0.514);
+    color: rgb(165, 164, 164);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-transform: uppercase;
+    text-shadow: rgb(62, 7, 107) 10px 11px 20px;
+    padding: 20px 0;
+}
+
+h2 {
+    color: gray;
+    font-size: 28px;
+    border-left: solid;
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    padding-left: 10px;
+    margin-left: 15px;
+
+}
+
+img {
+    max-width: 100%;
+
+}
+
+p {
+
+    font-size: 18px;
+    line-height: 1.5;
+
+}
+
+/* Regara seletor CLASSE */
+
+.centralizar {
+    text-align: center;
+}
+
+.sombra {
+
+    text-shadow: rgb(86, 16, 126) 1px 1px 3px;
+}
+
+.destaque {
+
+    background-color: black;
+    color: blueviolet;
+    padding: 3px;
+    border-radius: 4px;
+}
+
+
+#exemplo {
+
+    color: rgb(49, 11, 99);
+    padding: 3px;
+    border: solid 2px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+/* Seletor Descendente */
+
+p a {
+    background-color: rgb(54, 33, 112);
+    color: white;
+}
+
+nav a {
+
+    color: white;
+    background-color: rgb(96, 96, 160);
+    font-weight: bold;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+
+    padding: 10px;
+    border: solid 2px rgb(112, 49, 112);
+
+    box-sizing: border-box;
+    transition: 0.3s;
+    transform: scale(0.8);
+    opacity: 0.6;
+}
+
+nav a:hover {
+
+    background-color: rgb(24, 0, 48);
+    transform: scale(1);
+    opacity: 1;
+}
+
+figure {
+    /* background-color: rgb(98, 62, 131); */
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+
+}
+
+figcaption {
+
+    font-weight: bold;
+    color: rgb(23, 21, 24);
+    font-size: 18px;
+    text-align: left;
+}
+
+figure img {
+
+    filter: grayscale();
+    transition: 2s;
+}
+
+figure img:hover {
+
+
+    filter: none;
+
+}
+
+ul li {
+
+    font-size: 18px;
+    list-style-type: circle;
+    /* square */
+}
+
+ul li::marker {
+
+    content: "🐱‍👤";
+
+}
+
+ul li:first-child {
+    color: gray;
+    font-weight: bold;
+
+}
+
+ul li:first-child::marker {
+
+    content: "🎶";
+
+}
+
+ul li:last-child {
+
+    text-transform: uppercase;
+    font-weight: bold;
+    color: gray;
+}
+
+ul li:nth-child(4) {
+
+    color: gray;
+    font-weight: bold;
+
+}
+
+ul li:nth-child(4)::marker {
+    content: "👍";
+
+}
+
+ul li:nth-child(4),
+ul li:nth-child(8) ul li:nth-child(10) {
+    font-style: italic;
+}
